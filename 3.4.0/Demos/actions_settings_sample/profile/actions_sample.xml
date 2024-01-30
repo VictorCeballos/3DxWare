@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+(c) Copyright 3Dconnexion. All rights reserved. 
+$Revision: 13275 $
+-->
+<AppCfg Default="true" xmlns="" CfgFormatVersion="1.1" ThisFileVersion="1.0" xml:space="preserve">
+	<AppInfo>
+		<Name>Actions Sample</Name>
+		<InheritsFrom>STR_DEFAULT_S80</InheritsFrom>
+		<VersionRange>
+			<Min>1.0</Min>
+			<Max>1.0</Max>
+		</VersionRange>
+		<ExecutableName>actions_settings_sample.EXE</ExecutableName>
+		<ApplicationIcon>3Dx.ico</ApplicationIcon>
+		<Transport>S80</Transport>
+		<IgnoreMouseWheelInertia>true</IgnoreMouseWheelInertia>
+	</AppInfo>
+	<Settings>
+		<OverallScale>1.00</OverallScale>
+	</Settings>
+	<ButtonActions>
+		<ButtonAction Type="Menu">
+			<ID>Menu_RadialMenu_File</ID>
+			<Name>STR_MENU_FILE</Name>
+			<MenuID>RadialMenu_File</MenuID>
+		</ButtonAction>
+		<ButtonAction Type="Menu">
+			<ID>Menu_RadialMenu_Edit</ID>
+			<Name>STR_MENU_EDIT</Name>
+			<MenuID>RadialMenu_Edit</MenuID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_FILE_NEW</ID>
+			<Name>STR_FILE_NEW</Name>
+			<AppCmdID>FN_FILE_NEW</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_FILE_OPEN</ID>
+			<Name>STR_FILE_OPEN</Name>
+			<AppCmdID>FN_FILE_OPEN</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_FILE_SAVE</ID>
+			<Name>STR_FILE_SAVE</Name>
+			<AppCmdID>FN_FILE_SAVE</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_FILE_CLOSE</ID>
+			<Name>STR_FILE_CLOSE</Name>
+			<AppCmdID>FN_FILE_CLOSE</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_EDIT_UNDO</ID>
+			<Name>STR_EDIT_UNDO</Name>
+			<AppCmdID>FN_EDIT_UNDO</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_EDIT_REDO</ID>
+			<Name>STR_EDIT_REDO</Name>
+			<AppCmdID>FN_EDIT_REDO</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_EDIT_COPY</ID>
+			<Name>STR_EDIT_COPY</Name>
+			<AppCmdID>FN_EDIT_COPY</AppCmdID>
+		</ButtonAction>
+		<ButtonAction Type="AppCommand">
+			<ID>AppCommand_FN_EDIT_PASTE</ID>
+			<Name>STR_EDIT_PASTE</Name>
+			<AppCmdID>FN_EDIT_PASTE</AppCmdID>
+		</ButtonAction>
+	</ButtonActions>
+	<Menus>
+		<Executable>3dxpiemenus.exe</Executable>
+		<Menu Type="Radial">
+			<Name>STR_MENU_FILE</Name>
+			<ID>RadialMenu_File</ID>
+			<GesturesEnabled>true</GesturesEnabled>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_1</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_FILE_NEW</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_2</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_FILE_OPEN</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_3</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_FILE_SAVE</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_4</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_FILE_CLOSE</ActionID>
+				</Output>
+			</Button>
+		</Menu>
+		<Menu Type="Radial">
+			<Name>STR_MENU_EDIT</Name>
+			<ID>RadialMenu_Edit</ID>
+			<GesturesEnabled>true</GesturesEnabled>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_1</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_EDIT_UNDO</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_2</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_EDIT_REDO</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_3</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_EDIT_COPY</ActionID>
+				</Output>
+			</Button>
+			<Button>
+				<Input>
+					<ActionID>MenuButton_4</ActionID>
+				</Input>
+				<Output>
+					<ActionID>AppCommand_FN_EDIT_PASTE</ActionID>
+				</Output>
+			</Button>
+		</Menu>
+	</Menus>
+	<Devices>
+		<Device>
+			<Name>SpaceNavigator</Name>
+			<VendorID>46d</VendorID>
+			<ProductID>c626</ProductID>
+			<ButtonBank>
+				<Name>STR_DEFAULT_BUTTONBANK</Name>
+				<ID>Default</ID>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_1</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_File</ActionID>
+					</Output>
+				</Button>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_2</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_Edit</ActionID>
+					</Output>
+				</Button>
+			</ButtonBank>
+		</Device>
+		<Device>
+			<Name>SpaceNavigator for Notebooks</Name>
+			<VendorID>46d</VendorID>
+			<ProductID>c628</ProductID>
+			<ButtonBank>
+				<Name>STR_DEFAULT_BUTTONBANK</Name>
+				<ID>Default</ID>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_1</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_File</ActionID>
+					</Output>
+				</Button>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_2</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_Edit</ActionID>
+					</Output>
+				</Button>
+			</ButtonBank>
+		</Device>
+		<Device>
+			<Name>SpaceMouse Wireless</Name>
+			<VendorID>256f</VendorID>
+			<ProductID>c62e</ProductID>
+			<ButtonBank>
+				<Name>STR_DEFAULT_BUTTONBANK</Name>
+				<ID>Default</ID>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_1</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_File</ActionID>
+					</Output>
+				</Button>
+				<Button>
+					<Input>
+						<ActionID>HIDButton_2</ActionID>
+					</Input>
+					<Output>
+						<ActionID>Menu_RadialMenu_Edit</ActionID>
+					</Output>
+				</Button>
+			</ButtonBank>
+		</Device>
+	</Devices>
+</AppCfg>
